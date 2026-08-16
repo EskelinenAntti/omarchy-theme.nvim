@@ -1,14 +1,11 @@
 ---@type Opts
 local default_opts = {
 	themes = {
-		["osaka-jade"] = {
-			colorscheme = "bamboo",
-		},
-		catppuccin = {
-			colorscheme = "catppuccin",
-		},
 		["catppuccin-latte"] = {
 			colorscheme = "catppuccin-latte",
+		},
+		catppuccin = {
+			colorscheme = "catppuccin-nvim",
 		},
 		everforest = {
 			colorscheme = "everforest",
@@ -19,38 +16,35 @@ local default_opts = {
 		gruvbox = {
 			colorscheme = "gruvbox",
 		},
+		hackerman = {
+			colorscheme = "hackerman",
+		},
 		kanagawa = {
 			colorscheme = "kanagawa",
+		},
+		lumon = {
+			colorscheme = "lumon",
 		},
 		["matte-black"] = {
 			colorscheme = "matteblack",
 		},
-		ristretto = {
-			colorscheme = "monokai-pro",
-		},
 		nord = {
 			colorscheme = "nordfox",
+		},
+		["osaka-jade"] = {
+			colorscheme = "bamboo",
+		},
+		["retro-82"] = {
+			colorscheme = "retro-82",
 		},
 		["rose-pine"] = {
 			colorscheme = "rose-pine-dawn",
 		},
+		solitude = {
+			colorscheme = "ashen",
+		},
 		["tokyo-night"] = {
 			colorscheme = "tokyonight-night",
-		},
-		["hackerman"] = {
-			colorscheme = "hackerman",
-		},
-		["ethereal"] = {
-			colorscheme = "ethereal",
-		},
-		["vantablack"] = {
-			colorscheme = "vantablack",
-		},
-		["white"] = {
-			colorscheme = "white",
-		},
-		["miasma"] = {
-			colorscheme = "miasma",
 		},
 	},
 }
