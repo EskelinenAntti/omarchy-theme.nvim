@@ -5,6 +5,37 @@ A drop-in plugin for changing Neovim theme automatically when Omarchy theme chan
 ## Installation
 
 <details>
+<summary>vim.pack setup</summary>
+<br/>
+<p>
+Add this to your init.lua file and you are good to go.
+</p>
+
+```lua
+vim.pack.add({
+    -- 1. Install theme plugins
+    "https://github.com/neanias/everforest-nvim",
+    "https://github.com/kepano/flexoki-neovim",
+    "https://github.com/ellisonleao/gruvbox.nvim",
+    "https://github.com/bjarneo/aether.nvim",
+    "https://github.com/bjarneo/hackerman.nvim",
+    "https://github.com/rebelot/kanagawa.nvim",
+    "https://github.com/omacom-io/lumon.nvim",
+    "https://github.com/tahayvr/matteblack.nvim",
+    "https://github.com/EdenEast/nightfox.nvim",
+    "https://github.com/ribru17/bamboo.nvim",
+    "https://github.com/OldJobobo/retro-82.nvim",
+    "https://github.com/ficcdaf/ashen.nvim",
+    "https://github.com/folke/tokyonight.nvim",
+    { src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
+    { src = "https://github.com/rose-pine/neovim", name = "rose-pine" },
+    -- 2. Install omarchy-theme-loader.nvim
+	"https://github.com/EskelinenAntti/omarchy-theme-loader.nvim"
+})
+```
+
+</details>
+<details>
 <summary>lazy.nvim setup</summary>
 <br/>
 <p>
@@ -13,178 +44,34 @@ Add this to your plugins folder and you are good to go.
 
 ```lua
 return {
-    -- 1. Install the Neovim plugins for Omarchy themes.
-	{
-		"ribru17/bamboo.nvim",
-		priority = 1000,
-		lazy = true,
-	},
+    -- 1. Install theme plugins
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
-		priority = 1000,
-		lazy = true,
 	},
-	{
-		"neanias/everforest-nvim",
-		priority = 1000,
-		lazy = true,
-	},
-	{
-		"kepano/flexoki-neovim",
-		priority = 1000,
-		lazy = true,
-	},
-	{
-		"ellisonleao/gruvbox.nvim",
-		priority = 1000,
-		lazy = true,
-	},
-	{
-		"rebelot/kanagawa.nvim",
-		priority = 1000,
-		lazy = true,
-	},
-	{
-		"tahayvr/matteblack.nvim",
-		priority = 1000,
-		lazy = true,
-	},
-	{
-		"gthelding/monokai-pro.nvim",
-		priority = 1000,
-		lazy = true,
-		config = function()
-			require("monokai-pro").setup({
-				filter = "ristretto",
-				override = function()
-					return {
-						NonText = { fg = "#948a8b" },
-						MiniIconsGrey = { fg = "#948a8b" },
-						MiniIconsRed = { fg = "#fd6883" },
-						MiniIconsBlue = { fg = "#85dacc" },
-						MiniIconsGreen = { fg = "#adda78" },
-						MiniIconsYellow = { fg = "#f9cc6c" },
-						MiniIconsOrange = { fg = "#f38d70" },
-						MiniIconsPurple = { fg = "#a8a9eb" },
-						MiniIconsAzure = { fg = "#a8a9eb" },
-						MiniIconsCyan = { fg = "#85dacc" },
-					}
-				end,
-			})
-		end,
-	},
-	{
-		"shaunsingh/nord.nvim",
-		priority = 1000,
-		lazy = true,
-	},
-	{
-		"rose-pine/neovim",
-		name = "rose-pine",
-		priority = 1000,
-		lazy = true,
-	},
-	{
-		"folke/tokyonight.nvim",
-		priority = 1000,
-		lazy = true,
-	},
-	{
-		"EdenEast/nightfox.nvim",
-		priority = 1000,
-		lazy = true,
-	},
+	"neanias/everforest-nvim",
+	"flexoki-light/neovim.lua",
+	"kepano/flexoki-neovim",
+	"ellisonleao/gruvbox.nvim",
 	{
 		"bjarneo/hackerman.nvim",
 		dependencies = { "bjarneo/aether.nvim" },
-		priority = 1000,
-        lazy = true,
 	},
-    {
-        "bjarneo/ethereal.nvim",
-        priority = 1000,
-        lazy = true,
-    },
-    {
-        "xero/miasma.nvim",
-        priority = 1000,
-        lazy = true,
-    },
-    {
-        "bjarneo/vantablack.nvim",
-        priority = 1000,
-        lazy = true,
-    },
-    {
-        "bjarneo/white.nvim",
-        priority = 1000,
-        lazy = true,
-    },
-    -- 2. Install the omarchy-theme-loader plugin.
-	{
-		"EskelinenAntti/omarchy-theme-loader.nvim"
-	},
+	"rebelot/kanagawa.nvim",
+	"omacom-io/lumon.nvim",
+	"tahayvr/matteblack.nvim",
+	"EdenEast/nightfox.nvim",
+	"ribru17/bamboo.nvim",
+	"OldJobobo/retro-82.nvim",
+	{ "rose-pine/neovim", name = "rose-pine" },
+	"ficcdaf/ashen.nvim",
+	"folke/tokyonight.nvim",
+    -- 2. Install omarchy-theme-loader.nvim
+	"EskelinenAntti/omarchy-theme-loader.nvim"
 }
 ```
 </details>
 
-<details>
-<summary>mini.deps setup</summary>
-<br/>
-<p>
-Add this to your init.lua file and you are good to go.
-</p>
-
-```lua
-local add = MiniDeps.add
-
-add({
-    -- 1. Install the Neovim plugins for Omarchy themes.
-	depends = {
-		"ribru17/bamboo.nvim",
-		{ source = "catppuccin/nvim", name = "catppuccin" },
-		"neanias/everforest-nvim",
-		"kepano/flexoki-neovim",
-		"ellisonleao/gruvbox.nvim",
-		"rebelot/kanagawa.nvim",
-		"tahayvr/matteblack.nvim",
-		"shaunsingh/nord.nvim",
-		{ source = "rose-pine/neovim", name = "rose-pine" },
-		"folke/tokyonight.nvim",
-		"EdenEast/nightfox.nvim",
-		"gthelding/monokai-pro.nvim",
-        "bjarneo/aether.nvim",
-		"bjarneo/hackerman.nvim",
-        "bjarneo/ethereal.nvim",
-        "xero/miasma.nvim",
-        "bjarneo/vantablack.nvim",
-        "bjarneo/white.nvim",
-	},
-    -- 2. Install omarchy-theme-loader plugin
-	source = "EskelinenAntti/omarchy-theme-loader.nvim",
-})
-
-require("monokai-pro").setup({
-	filter = "ristretto",
-	override = function()
-		return {
-			NonText = { fg = "#948a8b" },
-			MiniIconsGrey = { fg = "#948a8b" },
-			MiniIconsRed = { fg = "#fd6883" },
-			MiniIconsBlue = { fg = "#85dacc" },
-			MiniIconsGreen = { fg = "#adda78" },
-			MiniIconsYellow = { fg = "#f9cc6c" },
-			MiniIconsOrange = { fg = "#f38d70" },
-			MiniIconsPurple = { fg = "#a8a9eb" },
-			MiniIconsAzure = { fg = "#a8a9eb" },
-			MiniIconsCyan = { fg = "#85dacc" },
-		}
-	end,
-})
-```
-
-</details>
 
 <details>
 
@@ -212,19 +99,41 @@ If you use a custom Omarchy theme
 The examples below shows how to configure `omarchy-theme-loader` to work with the <a href="https://github.com/bjarneo/omarchy-ash-theme">Omarchy Ash Theme</a>.
 
 <details>
+
+<summary>vim.pack example</summary>
+
+```lua
+vim.pack.add({
+    -- 1. Install the theme plugin
+    "https://github.com/bjarneo/ash.nvim",
+    -- ... other themes
+})
+
+-- 2. Configure required mapping between Omarchy theme name and Neovim colorscheme.
+require("omarchy-theme-loader").setup({
+    themes = {
+        -- Name of the Omarchy theme.
+        ["ash"] = {
+            -- Name of the corresponding Neovim colorscheme.
+            colorscheme = "ash"
+        }
+    }
+})
+```
+
+</details>
+
+<details>
 <summary>lazy.nvim example</summary>
 
 
 ```lua
 return {
-    -- ... other themes
-    
     -- 1. Install the theme plugin.
     {
         "bjarneo/ash.nvim"
-        priority=1000,
-        lazy=true,
     },
+    -- ... other themes
 
     -- 2. Configure required mapping between Omarchy theme name and Neovim colorscheme.
 	{
@@ -244,36 +153,6 @@ return {
 
 </details>
 
-<details>
-
-<summary>mini.deps example</summary>
-
-```lua
-local add = MiniDeps.add
-
-add({
-	source = "EskelinenAntti/omarchy-theme-loader.nvim",
-	depends = {
-        -- ... other themes
-
-        -- 1. Install the theme plugin
-		"bjarneo/ash.nvim",
-	},
-})
-
--- 2. Configure required mapping between Omarchy theme name and Neovim colorscheme.
-require("omarchy-theme-loader").setup({
-    themes = {
-        -- Name of the Omarchy theme.
-        ["ash"] = {
-            -- Name of the corresponding Neovim colorscheme.
-            colorscheme = "ash"
-        }
-    }
-})
-```
-
-</details>
 
 Don't know where to look for the plugin or the colorscheme? You can find those from the custom Omarchy theme's repository, from `neovim.lua` file.
 
