@@ -19,7 +19,7 @@ The latest version of this plugin (since v2.0.0) works only with Omarchy v4 or l
     Follow these steps:
     <ol>
         <li>Delete all other theme dependencies.</li>
-        <li>Set colorscheme to "omarchy" with `vim.cmd.colorscheme("omarchy")`</li>
+        <li>Set colorscheme to "omarchy" with <code>vim.cmd.colorscheme("omarchy")</code></li>
     </ol>
     </p>
 </details>
