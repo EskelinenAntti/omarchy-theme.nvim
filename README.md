@@ -7,6 +7,7 @@ https://github.com/user-attachments/assets/133dadfc-98d8-44a4-95a2-d3f7c6026313
 Main features:
 - Minimal footprint: no need to install any 3rd party theme plugins separately.
 - Supports custom Omarchy themes out-of-the-box. No additional configuration needed.
+- Works with any plugin manager.
 
 ## Supported Omarchy versions
 
