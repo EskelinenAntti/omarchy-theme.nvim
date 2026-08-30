@@ -20,6 +20,7 @@ The latest version of this plugin (since v2.0.0) works only with Omarchy v4 or l
     Follow these steps:
     <ol>
         <li>Delete all other theme dependencies.</li>
+        <li>Plugin has been renamed to `omarchy-theme.nvim`. While Github is redirecting the old url to the new repository, it's recommended that you update your config.</li>
         <li>Set colorscheme to "omarchy" with <code>vim.cmd.colorscheme("omarchy")</code></li>
     </ol>
     </p>
