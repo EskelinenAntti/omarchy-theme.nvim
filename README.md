@@ -1,384 +1,50 @@
-# Omarchy Theme Loader 🎨
+# omarchy-theme.nvim 🎨
 
-A drop-in plugin for changing Neovim theme automatically when Omarchy theme changes.
+A standalone Neovim colorscheme plugin that automatically syncs with the active Omarchy theme.
 
-## Deprecation notice
+https://github.com/user-attachments/assets/133dadfc-98d8-44a4-95a2-d3f7c6026313
 
-> [!IMPORTANT] 
-> This plugin has been deprecated in favor of [aether.nvim](https://github.com/bjarneo/aether.nvim)
+Main features:
+- Minimal footprint: no need to install any 3rd party theme plugins separately.
+- Supports custom Omarchy themes out-of-the-box. No additional configuration needed.
+- Works with any plugin manager.
 
-The repo is kept as a read-only archive. Omarchy itself relies on aether.nvim for some of its themes, and aether.nvim comes with built-in hot-reload functionality.
+## Supported Omarchy versions
 
-To achieve automatic Neovim theme changes with aether.nvim, you can simply do:
-
-```lua
--- Install all Omarchy theme plugins and aether.nvim (v3) with whatever plugin manager you use. This example is for vim.pack.
-vim.pack.add({
-	"https://github.com/neanias/everforest-nvim",
-	"https://github.com/kepano/flexoki-neovim",
-	"https://github.com/ellisonleao/gruvbox.nvim",
-	"https://github.com/bjarneo/aether.nvim",
-	"https://github.com/bjarneo/hackerman.nvim",
-	"https://github.com/rebelot/kanagawa.nvim",
-	"https://github.com/omacom-io/lumon.nvim",
-	"https://github.com/tahayvr/matteblack.nvim",
-	"https://github.com/EdenEast/nightfox.nvim",
-	"https://github.com/ribru17/bamboo.nvim",
-	"https://github.com/OldJobobo/retro-82.nvim",
-	"https://github.com/ficcdaf/ashen.nvim",
-	"https://github.com/folke/tokyonight.nvim",
-	{ src = "https://github.com/catppuccin/nvim", name = "catppuccin" },
-	{ src = "https://github.com/rose-pine/neovim", name = "rose-pine" },
-	{ src = "https://github.com/bjarneo/aether.nvim", version = "v3", name = "aether" },
-})
-
--- Configure aether.nvim. Consult the aether.nvim documentation for available configurations.
-require("aether").setup({
-	transparent = true,
-})
--- Enable aether colorscheme.
-vim.cmd.colorscheme("aether")
-```
-
-## Installation
+The latest version of this plugin (since v2.0.0) works only with Omarchy v4 or later.
 
 <details>
-<summary>lazy.nvim setup</summary>
-<br/>
-<p>
-Add this to your plugins folder and you are good to go.
-</p>
-
-```lua
-return {
-    -- 1. Install the Neovim plugins for Omarchy themes.
-	{
-		"ribru17/bamboo.nvim",
-		priority = 1000,
-		lazy = true,
-	},
-	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		priority = 1000,
-		lazy = true,
-	},
-	{
-		"neanias/everforest-nvim",
-		priority = 1000,
-		lazy = true,
-	},
-	{
-		"kepano/flexoki-neovim",
-		priority = 1000,
-		lazy = true,
-	},
-	{
-		"ellisonleao/gruvbox.nvim",
-		priority = 1000,
-		lazy = true,
-	},
-	{
-		"rebelot/kanagawa.nvim",
-		priority = 1000,
-		lazy = true,
-	},
-	{
-		"tahayvr/matteblack.nvim",
-		priority = 1000,
-		lazy = true,
-	},
-	{
-		"gthelding/monokai-pro.nvim",
-		priority = 1000,
-		lazy = true,
-		config = function()
-			require("monokai-pro").setup({
-				filter = "ristretto",
-				override = function()
-					return {
-						NonText = { fg = "#948a8b" },
-						MiniIconsGrey = { fg = "#948a8b" },
-						MiniIconsRed = { fg = "#fd6883" },
-						MiniIconsBlue = { fg = "#85dacc" },
-						MiniIconsGreen = { fg = "#adda78" },
-						MiniIconsYellow = { fg = "#f9cc6c" },
-						MiniIconsOrange = { fg = "#f38d70" },
-						MiniIconsPurple = { fg = "#a8a9eb" },
-						MiniIconsAzure = { fg = "#a8a9eb" },
-						MiniIconsCyan = { fg = "#85dacc" },
-					}
-				end,
-			})
-		end,
-	},
-	{
-		"shaunsingh/nord.nvim",
-		priority = 1000,
-		lazy = true,
-	},
-	{
-		"rose-pine/neovim",
-		name = "rose-pine",
-		priority = 1000,
-		lazy = true,
-	},
-	{
-		"folke/tokyonight.nvim",
-		priority = 1000,
-		lazy = true,
-	},
-	{
-		"EdenEast/nightfox.nvim",
-		priority = 1000,
-		lazy = true,
-	},
-	{
-		"bjarneo/hackerman.nvim",
-		dependencies = { "bjarneo/aether.nvim" },
-		priority = 1000,
-        lazy = true,
-	},
-    {
-        "bjarneo/ethereal.nvim",
-        priority = 1000,
-        lazy = true,
-    },
-    {
-        "xero/miasma.nvim",
-        priority = 1000,
-        lazy = true,
-    },
-    {
-        "bjarneo/vantablack.nvim",
-        priority = 1000,
-        lazy = true,
-    },
-    {
-        "bjarneo/white.nvim",
-        priority = 1000,
-        lazy = true,
-    },
-    -- 2. Install the omarchy-theme-loader plugin.
-	{
-		"EskelinenAntti/omarchy-theme-loader.nvim"
-	},
-}
-```
+    <summary>Migrating from plugin version v1 to v2 (or later)</summary>
+    <br/>
+    <p>
+    Follow these steps:
+    <ol>
+        <li>Delete all other theme dependencies.</li>
+        <li>Plugin has been renamed to `omarchy-theme.nvim`. While Github is redirecting the old url to the new repository, it's recommended that you update your config.</li>
+        <li>Set colorscheme to "omarchy" with <code>vim.cmd.colorscheme("omarchy")</code></li>
+    </ol>
+    </p>
 </details>
 
-<details>
-<summary>mini.deps setup</summary>
-<br/>
-<p>
-Add this to your init.lua file and you are good to go.
-</p>
+## Installation with vim.pack (Neovim built-in plugin manager)
+
+Add these two lines to your init.lua file and you are good to go.
 
 ```lua
-local add = MiniDeps.add
-
-add({
-    -- 1. Install the Neovim plugins for Omarchy themes.
-	depends = {
-		"ribru17/bamboo.nvim",
-		{ source = "catppuccin/nvim", name = "catppuccin" },
-		"neanias/everforest-nvim",
-		"kepano/flexoki-neovim",
-		"ellisonleao/gruvbox.nvim",
-		"rebelot/kanagawa.nvim",
-		"tahayvr/matteblack.nvim",
-		"shaunsingh/nord.nvim",
-		{ source = "rose-pine/neovim", name = "rose-pine" },
-		"folke/tokyonight.nvim",
-		"EdenEast/nightfox.nvim",
-		"gthelding/monokai-pro.nvim",
-        "bjarneo/aether.nvim",
-		"bjarneo/hackerman.nvim",
-        "bjarneo/ethereal.nvim",
-        "xero/miasma.nvim",
-        "bjarneo/vantablack.nvim",
-        "bjarneo/white.nvim",
-	},
-    -- 2. Install omarchy-theme-loader plugin
-	source = "EskelinenAntti/omarchy-theme-loader.nvim",
-})
-
-require("monokai-pro").setup({
-	filter = "ristretto",
-	override = function()
-		return {
-			NonText = { fg = "#948a8b" },
-			MiniIconsGrey = { fg = "#948a8b" },
-			MiniIconsRed = { fg = "#fd6883" },
-			MiniIconsBlue = { fg = "#85dacc" },
-			MiniIconsGreen = { fg = "#adda78" },
-			MiniIconsYellow = { fg = "#f9cc6c" },
-			MiniIconsOrange = { fg = "#f38d70" },
-			MiniIconsPurple = { fg = "#a8a9eb" },
-			MiniIconsAzure = { fg = "#a8a9eb" },
-			MiniIconsCyan = { fg = "#85dacc" },
-		}
-	end,
-})
+vim.pack.add({"https://github.com/EskelinenAntti/omarchy-theme.nvim"})
+vim.cmd.colorscheme("omarchy")
 ```
 
-</details>
-
 <details>
-
-<summary>Other plugin managers and manual installation</summary>  
-<br/>
-<p>
-To use
-<ol>
-    <li>Install the Neovim plugins for Omarchy themes (you can find the list of default theme plugins from above examples).</li>
-    <li>Install the `EskelinenAntti/omarchy-theme-loader.nvim` plugin.</li>
-</ol>
-</p>
-
-</details>
-
-
-## Advanced configuration
-
-### Custom Omarchy themes
-
-If you use a custom Omarchy theme
-1. Install the Neovim plugin for that theme.
-2. Configure the mapping between Omarchy theme name and Neovim colorscheme.
-
-The examples below shows how to configure `omarchy-theme-loader` to work with the <a href="https://github.com/bjarneo/omarchy-ash-theme">Omarchy Ash Theme</a>.
-
-<details>
-<summary>lazy.nvim example</summary>
-
-
-```lua
-return {
-    -- ... other themes
-    
-    -- 1. Install the theme plugin.
-    {
-        "bjarneo/ash.nvim"
-        priority=1000,
-        lazy=true,
-    },
-
-    -- 2. Configure required mapping between Omarchy theme name and Neovim colorscheme.
-	{
-		"EskelinenAntti/omarchy-theme-loader.nvim",
-        opts = {
-            themes = {
-                -- Name of the Omarchy theme.
-                ["ash"] = {
-                    -- Name of the corresponding Neovim colorscheme.
-                    colorscheme = "ash"
-                }
-            }
-        }
-
-	},
-```
-
-</details>
-
-<details>
-
-<summary>mini.deps example</summary>
-
-```lua
-local add = MiniDeps.add
-
-add({
-	source = "EskelinenAntti/omarchy-theme-loader.nvim",
-	depends = {
-        -- ... other themes
-
-        -- 1. Install the theme plugin
-		"bjarneo/ash.nvim",
-	},
-})
-
--- 2. Configure required mapping between Omarchy theme name and Neovim colorscheme.
-require("omarchy-theme-loader").setup({
-    themes = {
-        -- Name of the Omarchy theme.
-        ["ash"] = {
-            -- Name of the corresponding Neovim colorscheme.
-            colorscheme = "ash"
-        }
-    }
-})
-```
-
-</details>
-
-Don't know where to look for the plugin or the colorscheme? You can find those from the custom Omarchy theme's repository, from `neovim.lua` file.
-
-For example, see the [neovim.lua](https://github.com/bjarneo/omarchy-ash-theme/blob/main/neovim.lua) file for the Omarchy Ash Theme: the Neovim plugin is `bjarneo/ash.nvim` and the colorscheme is `ash`.
-
-### Overriding Omarchy's default themes
-
-Your are not forced to use the same Neovim themes as Omarchy uses by default.
-
-For example, if you want to keep your Neovim setup minimal and don't want to install lot's of theme plugins, you can override omarchy-theme-loader's configuration to use Neovim's builtin themes.
-
-<details>
-<summary>lazy.nvim example</summary>
-
-
-```lua
-return {
-	{
-		"EskelinenAntti/omarchy-theme-loader.nvim",
-        opts = {
-            themes = {
-                ["tokyo-night"] = { colorscheme = "slate" },
-                ["catppuccin"] = { colorscheme = "blue" },
-                ["everforest"] = { colorscheme = "desert" },
-                ["gruvbox"] = { colorscheme = "retrobox" },
-                ["osaka-jade"] = { colorscheme = "slate" },
-                ["kanagawa"] = { colorscheme = "slate" },
-                ["nord"] = { colorscheme = "blue" },
-                ["matte-black"] = { colorscheme = "koehler" },
-                ["ristretto"] = { colorscheme = "koehler" },
-                ["flexoki-light"] = { colorscheme = "morning" },
-                ["rose-pine"] = { colorscheme = "morning" },
-                ["catppuccin-latte"] = { colorscheme = "delek" },
-            }
-        }
-
-	},
-```
-
-</details>
-
-<details>
-
-<summary>mini.deps example</summary>
-
-```lua
-local add = MiniDeps.add
-
-add("EskelinenAntti/omarchy-theme-loader.nvim")
-require("omarchy-theme-loader").setup({
-    themes = {
-		["tokyo-night"] = { colorscheme = "slate" },
-		["catppuccin"] = { colorscheme = "blue" },
-		["everforest"] = { colorscheme = "desert" },
-		["gruvbox"] = { colorscheme = "retrobox" },
-		["osaka-jade"] = { colorscheme = "slate" },
-		["kanagawa"] = { colorscheme = "slate" },
-		["nord"] = { colorscheme = "blue" },
-		["matte-black"] = { colorscheme = "koehler" },
-		["ristretto"] = { colorscheme = "koehler" },
-		["flexoki-light"] = { colorscheme = "morning" },
-		["rose-pine"] = { colorscheme = "morning" },
-		["catppuccin-latte"] = { colorscheme = "delek" },
-    }
-})
-```
-
+    <summary>Other plugin managers and manual installation</summary>  
+    <br/>
+    <p>
+    To use the plugin
+    <ol>
+        <li>Install the `EskelinenAntti/omarchy-theme.nvim` plugin following the usual steps of your chosen plugin manager</li>
+        <li>Set colorscheme to "omarchy" with `vim.cmd.colorscheme("omarchy")`</li>
+    </ol>
+    </p>
 </details>
 
 ### Other OSs
@@ -388,8 +54,10 @@ The plugin only activates when it detects the Omarchy theme folder at `~/.config
 To specify a theme to be used in non-Omarchy environments, you can simply do
 
 ```lua
-vim.cmd.colorscheme("retrobox") -- or whatever theme or colorscheme you prefer to use outside of Omarchy
+if (require("omarchy-theme.environment").is_omarchy()) then
+    vim.cmd.colorscheme("omarchy")
+else
+    vim.cmd.colorscheme("retrobox") -- or whatever theme or colorscheme you prefer to use outside of Omarchy
+end
 ```
-
-This setting will apply in non-Omarchy environments. When in Omarchy, the omarchy-theme-loader will overwrite it with the current Omarchy theme.
 
