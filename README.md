@@ -2,7 +2,7 @@
 
 A standalone Neovim colorscheme plugin that automatically syncs with the active Omarchy theme.
 
-<video src="assets/omarchy-theme-nvim.mp4"/>
+https://github.com/user-attachments/assets/133dadfc-98d8-44a4-95a2-d3f7c6026313
 
 Main features:
 - Minimal footprint: no need to install any 3rd party theme plugins separately.
