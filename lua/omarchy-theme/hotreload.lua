@@ -1,5 +1,4 @@
----@type userdata|nil
-local handle
+local M = {}
 
 ---Sync Neovim theme to the current Omarchy theme.
 local function sync_theme()
@@ -8,8 +7,6 @@ local function sync_theme()
 	end
 	require("omarchy-theme").apply()
 end
-
-local M = {}
 
 ---Sync the Neovim theme to current Omarchy theme, and start watching for Omarchy theme changes.
 ---
@@ -20,25 +17,25 @@ M.start = function()
 		return
 	end
 
-	if handle then
-		return
-	end
-
-	local err
-	handle, err = vim.uv.new_fs_event()
-	if err or not handle then
+	local fs_event, err = vim.uv.new_fs_event()
+	if err or not fs_event then
 		vim.notify(string.format("Could not start listening for Omarchy theme changes: %s", err), vim.log.levels.ERROR)
 		return
 	end
 
-	-- Watching the current/theme.name file instead of current/theme/colors.toml works better for some reason. If trying to watch the
-	-- latter file, the watcher stops receiving events after 1 or two theme changes. This could be due to Omarchy replacing the whole
-	-- current/theme folder.
-	vim.uv.fs_event_start(handle, require("omarchy-theme.environment").omarchy_current_theme_name_path, {}, function()
-		-- vim.cmd.* commands must not be called in fast event context, so defer it to be invoked soon by the main event loop.
-		vim.schedule(function()
-			sync_theme()
-		end)
+	local cooldown
+	vim.uv.fs_event_start(fs_event, require("omarchy-theme.environment").omarchy_current_theme_name_path, {}, function()
+		if cooldown and cooldown:is_active() then
+			return
+		end
+
+		cooldown = vim.defer_fn(
+			-- vim.cmd.* commands must not be called in fast event context, so defer it to be invoked soon by the main event loop.
+			vim.schedule_wrap(function()
+				sync_theme()
+			end),
+			100
+		)
 	end)
 end
 
