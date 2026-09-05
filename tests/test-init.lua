@@ -1,8 +1,16 @@
+---Reset and return module. Can be used to reset cached state between tests.
+---@param module string
+---@return unknown
+local function reset(module)
+	package.loaded[module] = nil
+	return require(module)
+end
+
 return {
 	test_apply = function()
 		-- Given
 		local theme = require("omarchy-theme")
-		local env = require("omarchy-theme.environment")
+		local env = reset("omarchy-theme.environment")
 		env.omarchy_current_theme_colors_path = "tests/current/theme/colors.toml"
 		env.omarchy_current_theme_name_path = "tests/current/theme.name"
 
@@ -20,7 +28,7 @@ return {
 		vim.api.nvim_set_hl(0, "Normal", { fg = want })
 
 		local theme = require("omarchy-theme")
-		local env = require("omarchy-theme.environment")
+		local env = reset("omarchy-theme.environment")
 		env.omarchy_current_theme_colors_path = "tests/not-existing/theme/colors.toml"
 		env.omarchy_current_theme_name_path = "tests/not-existing/theme.name"
 		-- When
@@ -35,7 +43,7 @@ return {
 		vim.api.nvim_set_hl(0, "HighlightGroupToClear", { fg = "#ffffff" })
 
 		local theme = require("omarchy-theme")
-		local env = require("omarchy-theme.environment")
+		local env = reset("omarchy-theme.environment")
 		env.omarchy_current_theme_colors_path = "tests/current/theme/colors.toml"
 		env.omarchy_current_theme_name_path = "tests/current/theme.name"
 		-- When
