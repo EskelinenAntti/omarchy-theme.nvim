@@ -2,7 +2,7 @@ local function get_test_files()
 	local files = {}
 
 	for name, type in vim.fs.dir("tests") do
-		if type == "file" and name:match("test%.lua$") and name ~= "init.lua" then
+		if type == "file" and name:match("^test.*%.lua$") then
 			table.insert(files, name)
 		end
 	end
