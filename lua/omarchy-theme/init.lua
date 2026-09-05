@@ -4,6 +4,18 @@ M.name = "omarchy"
 
 function M.apply()
 	if not require("omarchy-theme.environment").is_omarchy() then
+		vim.notify(
+			"Tried to apply `omarchy` colorscheme outside of Omarchy.\n\n"
+				.. "To specify a theme to be used in non-Omarchy environments, add below lines to your Neovim configuration:\n"
+				.. "```lua\n"
+				.. 'if require("omarchy-theme.environment").is_omarchy() then\n'
+				.. '  vim.cmd.colorscheme("omarchy")\n'
+				.. "else\n"
+				.. '  vim.cmd.colorscheme("default")\n'
+				.. "end\n"
+				.. "```",
+			vim.log.levels.WARN
+		)
 		return
 	end
 
@@ -12,6 +24,7 @@ function M.apply()
 	)
 
 	if not palette then
+		vim.notify(string.format("Could not load Omarchy theme colors."), vim.log.levels.ERROR)
 		return
 	end
 
