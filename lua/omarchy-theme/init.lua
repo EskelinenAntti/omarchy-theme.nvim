@@ -4,6 +4,10 @@ M.name = "omarchy"
 
 function M.apply()
 	if not require("omarchy-theme.environment").is_omarchy() then
+		vim.notify(
+			string.format("Omarchy theme configuration was not found. `omarchy` colorscheme has no effect."),
+			vim.log.levels.WARN
+		)
 		return
 	end
 
@@ -12,6 +16,7 @@ function M.apply()
 	)
 
 	if not palette then
+		vim.notify(string.format("Could not load Omarchy theme colors."), vim.log.levels.ERROR)
 		return
 	end
 
