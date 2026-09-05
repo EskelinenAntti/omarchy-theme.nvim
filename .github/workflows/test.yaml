@@ -16,5 +16,7 @@ jobs:
       - name: Install Neovim
         run: sudo apt-get update && sudo apt-get install -y neovim
 
+      - name: Neovim version
+        run: nvim --version
       - name: Run tests
         run: make test
