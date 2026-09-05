@@ -127,7 +127,7 @@ function M.highlights_for(p)
 		Removed = { fg = p.red },
 		Repeat = { fg = p.magenta, bold = true },
 		Search = { fg = p.background, bg = p.yellow, bold = true },
-		SignColumn = { fg = p.light_foreground, bg = p.background },
+		SignColumn = { fg = p.light_foreground },
 		Special = { fg = p.cyan },
 		SpecialChar = { fg = p.orange },
 		SpecialKey = { fg = p.light_foreground },
