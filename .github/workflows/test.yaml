@@ -1,0 +1,26 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Neovim
+        run: |
+          curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+          sudo rm -rf /opt/nvim-linux-x86_64
+          sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+          echo "/opt/nvim-linux-x86_64/bin" >> "$GITHUB_PATH"
+
+      - name: Neovim version
+        run: nvim --version
+      - name: Run tests
+        run: make test
