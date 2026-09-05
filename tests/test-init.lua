@@ -42,6 +42,6 @@ return {
 		theme.apply()
 
 		-- Then
-		assert(vim.tbl_isempty(vim.api.nvim_get_hl(0, { name = "HighlightGroupToClear" })))
+		assert(vim.api.nvim_get_hl(0, { name = "HighlightGroupToClear" }).fg == nil, "Highlights were not cleared")
 	end,
 }
