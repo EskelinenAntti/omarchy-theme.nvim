@@ -22,6 +22,6 @@ for _, file in ipairs(get_test_files()) do
 			os.exit(1)
 		end
 
-		print(("PASS %s/%s"):format(file, name))
+		print(("PASS %s/%s\n"):format(file, name))
 	end
 end
