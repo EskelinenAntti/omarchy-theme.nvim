@@ -45,4 +45,21 @@ return {
 		-- Then
 		assert(vim.api.nvim_get_hl(0, { name = "HighlightGroupToClear" }).fg == nil, "Highlights were not cleared")
 	end,
+
+	["Use yellow as fallback when theme does not define orange color"] = function()
+		-- Given
+		vim.api.nvim_set_hl(0, "Boolean", { fg = "#ffffff" })
+
+		local env = require("omarchy-theme.environment")
+		env.omarchy_current_theme_colors_path = "tests/current/theme/colors-without-orange.toml"
+		env.omarchy_current_theme_name_path = "tests/current/theme.name"
+
+		-- When
+		vim.cmd.colorscheme("omarchy")
+
+		-- Then
+		local got = string.format("#%06x", vim.api.nvim_get_hl(0, { name = "Boolean" }).fg)
+		local want = "#b36d43"
+		assert(got == want, "got:" .. got .. ",want:" .. want)
+	end,
 }

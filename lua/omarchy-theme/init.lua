@@ -19,15 +19,16 @@ function M.apply()
 		return
 	end
 
-	local palette = require("omarchy-theme.toml-parser").parse_file(
+	local toml = require("omarchy-theme.toml-parser").parse_file(
 		require("omarchy-theme.environment").omarchy_current_theme_colors_path
 	)
 
-	if not palette then
+	if not toml then
 		vim.notify(string.format("Could not load Omarchy theme colors."), vim.log.levels.ERROR)
 		return
 	end
 
+	local palette = require("omarchy-theme.palette").palette_for(toml)
 	local highlights = require("omarchy-theme.highlighter").highlights_for(palette)
 
 	vim.cmd.hi("clear")
