@@ -19,7 +19,6 @@ local M = {}
 ---@field cyan string
 ---@field blue string
 ---@field magenta string
----@field brown string
 ---@field bright_red string
 ---@field bright_yellow string
 ---@field bright_green string
@@ -46,7 +45,7 @@ function M.highlights_for(p)
 		Conceal = { fg = p.muted },
 		Conditional = { fg = p.magenta, bold = true },
 		Constant = { fg = p.orange },
-		CurSearch = { fg = p.background, bg = p.orange, bold = true },
+		CurSearch = { fg = p.orange, bold = true, reverse = true },
 		Cursor = { fg = p.background, bg = p.bright_foreground },
 		CursorColumn = { bg = p.selection },
 		CursorLine = { bg = p.selection },
@@ -94,7 +93,7 @@ function M.highlights_for(p)
 		HealthSuccess = { fg = p.green, bold = true },
 		HealthWarning = { fg = p.yellow, bold = true },
 		Identifier = { fg = p.foreground },
-		IncSearch = { fg = p.background, bg = p.orange, bold = true },
+		IncSearch = { fg = p.orange, bold = true, reverse = true },
 		Include = { fg = p.cyan },
 		Keyword = { fg = p.magenta, bold = true },
 		Label = { fg = p.cyan },
