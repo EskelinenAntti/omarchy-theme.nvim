@@ -1,4 +1,8 @@
 return {
+	after = function()
+		vim.opt.termguicolors = true
+	end,
+
 	["Omarchy theme colors are applied as Neovim highlights"] = function()
 		-- Given
 		local env = require("omarchy-theme.environment")
@@ -28,13 +32,29 @@ return {
 		local env = require("omarchy-theme.environment")
 		env.omarchy_current_theme_colors_path = "tests/not-existing/theme/colors.toml"
 		env.omarchy_current_theme_name_path = "tests/not-existing/theme.name"
-
+		vim.opt.termguicolors = true
 		-- When
 		vim.cmd.colorscheme("omarchy")
 
 		-- Then
 		local got = string.format("#%06x", vim.api.nvim_get_hl(0, { name = "Normal" }).fg)
 		assert(got == old_highlight, "got:" .. got .. ",want:" .. old_highlight)
+	end,
+
+	["Load ANSI colors even when no Omarchy configuration is found if termguicolors is off"] = function()
+		-- Given
+		local env = require("omarchy-theme.environment")
+		env.omarchy_current_theme_colors_path = "tests/not-existing/theme/colors.toml"
+		env.omarchy_current_theme_name_path = "tests/not-existing/theme.name"
+		vim.opt.termguicolors = false
+		-- When
+		vim.cmd.colorscheme("omarchy")
+
+		-- Then
+		local normal = vim.api.nvim_get_hl(0, { name = "Normal" })
+		assert(normal.ctermfg == 7, "Normal ctermfg got:" .. vim.inspect(normal.ctermfg))
+		assert(normal.ctermbg == 0, "Normal ctermbg got:" .. vim.inspect(normal.ctermbg))
+		assert(normal.fg == nil, "Normal ctermbg got:" .. vim.inspect(normal.fg))
 	end,
 
 	["Previous highlights set by other themes are cleared"] = function()
