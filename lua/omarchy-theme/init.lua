@@ -3,7 +3,11 @@ local M = {}
 M.name = "omarchy"
 
 function M.apply()
-	if not require("omarchy-theme.environment").is_omarchy() then
+	local env = require("omarchy-theme.environment")
+	local termguicolors = vim.o.termguicolors
+	local is_omarchy = env.is_omarchy()
+
+	if not is_omarchy and termguicolors then
 		vim.notify(
 			"Tried to apply `omarchy` colorscheme outside of Omarchy.\n\n"
 				.. "To specify a theme to be used in non-Omarchy environments, add below lines to your Neovim configuration:\n"
@@ -19,17 +23,18 @@ function M.apply()
 		return
 	end
 
-	local toml = require("omarchy-theme.toml-parser").parse_file(
-		require("omarchy-theme.environment").omarchy_current_theme_colors_path
-	)
-
-	if not toml then
-		vim.notify(string.format("Could not load Omarchy theme colors."), vim.log.levels.ERROR)
-		return
+	local ansi = require("omarchy-theme.palette").ansi_palette
+	local gui
+	if is_omarchy then
+		local toml = require("omarchy-theme.toml-parser").parse_file(env.omarchy_current_theme_colors_path)
+		if not toml then
+			vim.notify(string.format("Could not load Omarchy theme colors."), vim.log.levels.ERROR)
+			return
+		end
+		gui = require("omarchy-theme.palette").gui_palette(toml)
 	end
 
-	local palette = require("omarchy-theme.palette").palette_for(toml)
-	local highlights = require("omarchy-theme.highlighter").highlights_for(palette)
+	local highlights = require("omarchy-theme.highlighter").highlights_for(gui, ansi)
 
 	vim.cmd.hi("clear")
 	vim.g.colors_name = M.name

@@ -12,6 +12,12 @@ return {
 		local got = string.format("#%06x", vim.api.nvim_get_hl(0, { name = "Normal" }).fg)
 		local want = "#c2c2b0"
 		assert(got == want, "got:" .. got .. ",want" .. want)
+		local normal = vim.api.nvim_get_hl(0, { name = "Normal" })
+		assert(normal.ctermfg == 7, "Normal ctermfg got:" .. vim.inspect(normal.ctermfg))
+		assert(normal.ctermbg == 0, "Normal ctermbg got:" .. vim.inspect(normal.ctermbg))
+
+		local string_hl = vim.api.nvim_get_hl(0, { name = "String" })
+		assert(string_hl.ctermfg == 2, "String ctermfg got:" .. vim.inspect(string_hl.ctermfg))
 	end,
 
 	["Neovim highlights are not updated outside of Omarchy"] = function()
