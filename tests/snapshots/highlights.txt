@@ -1,0 +1,1999 @@
+{
+  ["@attribute"] = {
+    link = "Macro"
+  },
+  ["@attribute.builtin"] = {
+    link = "Special"
+  },
+  ["@boolean"] = {
+    link = "Boolean"
+  },
+  ["@character"] = {
+    link = "Character"
+  },
+  ["@character.special"] = {
+    link = "SpecialChar"
+  },
+  ["@comment"] = {
+    link = "Comment"
+  },
+  ["@comment.error"] = {
+    link = "DiagnosticError"
+  },
+  ["@comment.note"] = {
+    link = "DiagnosticInfo"
+  },
+  ["@comment.todo"] = {
+    link = "Todo"
+  },
+  ["@comment.warning"] = {
+    link = "DiagnosticWarn"
+  },
+  ["@constant"] = {
+    link = "Constant"
+  },
+  ["@constant.builtin"] = {
+    cterm = {
+      italic = true
+    },
+    ctermfg = 3,
+    fg = 9265730,
+    italic = true
+  },
+  ["@constructor"] = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 3,
+    fg = 11758915
+  },
+  ["@diff.delta"] = {
+    ctermfg = 3,
+    fg = 11758915
+  },
+  ["@diff.minus"] = {
+    ctermfg = 1,
+    fg = 6838082
+  },
+  ["@diff.plus"] = {
+    ctermfg = 2,
+    fg = 6260575
+  },
+  ["@field"] = {
+    ctermfg = 4,
+    fg = 7897675
+  },
+  ["@float"] = {
+    link = "Float"
+  },
+  ["@function"] = {
+    link = "Function"
+  },
+  ["@function.builtin"] = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 6,
+    fg = 13215060
+  },
+  ["@function.call"] = {
+    ctermfg = 4,
+    fg = 7897675
+  },
+  ["@function.method"] = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 4,
+    fg = 7897675
+  },
+  ["@function.method.call"] = {
+    ctermfg = 4,
+    fg = 7897675
+  },
+  ["@keyword"] = {
+    link = "Keyword"
+  },
+  ["@keyword.conditional"] = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 5,
+    fg = 12285764
+  },
+  ["@keyword.function"] = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 5,
+    fg = 12285764
+  },
+  ["@keyword.import"] = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 6,
+    fg = 13215060
+  },
+  ["@keyword.operator"] = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 6,
+    fg = 13215060
+  },
+  ["@keyword.repeat"] = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 5,
+    fg = 12285764
+  },
+  ["@keyword.return"] = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 5,
+    fg = 12285764
+  },
+  ["@label"] = {
+    link = "Label"
+  },
+  ["@lsp.mod.deprecated"] = {
+    link = "DiagnosticDeprecated"
+  },
+  ["@lsp.type.class"] = {
+    link = "@type"
+  },
+  ["@lsp.type.comment"] = {
+    link = "@comment"
+  },
+  ["@lsp.type.decorator"] = {
+    link = "@attribute"
+  },
+  ["@lsp.type.enum"] = {
+    link = "@type"
+  },
+  ["@lsp.type.enumMember"] = {
+    link = "@constant"
+  },
+  ["@lsp.type.event"] = {
+    link = "@type"
+  },
+  ["@lsp.type.function"] = {
+    link = "@function"
+  },
+  ["@lsp.type.interface"] = {
+    link = "@type"
+  },
+  ["@lsp.type.keyword"] = {
+    link = "@keyword"
+  },
+  ["@lsp.type.macro"] = {
+    link = "@constant.macro"
+  },
+  ["@lsp.type.method"] = {
+    link = "@function.method"
+  },
+  ["@lsp.type.modifier"] = {
+    link = "@type.qualifier"
+  },
+  ["@lsp.type.namespace"] = {
+    link = "@module"
+  },
+  ["@lsp.type.number"] = {
+    link = "@number"
+  },
+  ["@lsp.type.operator"] = {
+    link = "@operator"
+  },
+  ["@lsp.type.parameter"] = {
+    link = "@variable.parameter"
+  },
+  ["@lsp.type.property"] = {
+    link = "@property"
+  },
+  ["@lsp.type.regexp"] = {
+    link = "@string.regexp"
+  },
+  ["@lsp.type.string"] = {
+    link = "@string"
+  },
+  ["@lsp.type.struct"] = {
+    link = "@type"
+  },
+  ["@lsp.type.type"] = {
+    link = "@type"
+  },
+  ["@lsp.type.typeParameter"] = {
+    link = "@type.definition"
+  },
+  ["@lsp.type.variable"] = {
+    link = "@variable"
+  },
+  ["@markup"] = {
+    link = "Special"
+  },
+  ["@markup.heading"] = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    fg = 7897675
+  },
+  ["@markup.heading.1.delimiter.vimdoc"] = {
+    bg = 2236962,
+    cterm = {
+      nocombine = true,
+      underdouble = true
+    },
+    fg = 2236962,
+    nocombine = true,
+    sp = 12763824,
+    underdouble = true
+  },
+  ["@markup.heading.2.delimiter.vimdoc"] = {
+    bg = 2236962,
+    cterm = {
+      nocombine = true,
+      underline = true
+    },
+    fg = 2236962,
+    nocombine = true,
+    sp = 12763824,
+    underline = true
+  },
+  ["@markup.italic"] = {
+    cterm = {
+      italic = true
+    },
+    ctermfg = 7,
+    fg = 12763824,
+    italic = true
+  },
+  ["@markup.link"] = {
+    cterm = {
+      underline = true
+    },
+    ctermfg = 4,
+    fg = 7897675,
+    underline = true
+  },
+  ["@markup.raw"] = {
+    ctermfg = 2,
+    fg = 6260575
+  },
+  ["@markup.strikethrough"] = {
+    cterm = {
+      strikethrough = true
+    },
+    strikethrough = true
+  },
+  ["@markup.strong"] = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 15,
+    fg = 12763824
+  },
+  ["@markup.underline"] = {
+    cterm = {
+      underline = true
+    },
+    underline = true
+  },
+  ["@module"] = {
+    link = "Structure"
+  },
+  ["@module.builtin"] = {
+    link = "Special"
+  },
+  ["@number"] = {
+    link = "Number"
+  },
+  ["@number.float"] = {
+    link = "Float"
+  },
+  ["@operator"] = {
+    link = "Operator"
+  },
+  ["@property"] = {
+    ctermfg = 4,
+    fg = 7897675
+  },
+  ["@punctuation"] = {
+    link = "Delimiter"
+  },
+  ["@punctuation.bracket"] = {
+    ctermfg = 7,
+    fg = 12763824
+  },
+  ["@punctuation.delimiter"] = {
+    ctermfg = 8,
+    fg = 6710886
+  },
+  ["@punctuation.special"] = {
+    ctermfg = 6,
+    fg = 13215060
+  },
+  ["@string"] = {
+    link = "String"
+  },
+  ["@string.documentation"] = {
+    cterm = {
+      italic = true
+    },
+    ctermfg = 2,
+    fg = 6260575,
+    italic = true
+  },
+  ["@string.escape"] = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 3,
+    fg = 9265730
+  },
+  ["@string.regexp"] = {
+    link = "@string.special"
+  },
+  ["@string.special"] = {
+    ctermfg = 6,
+    fg = 13215060
+  },
+  ["@string.special.url"] = {
+    link = "Underlined"
+  },
+  ["@tag"] = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 4,
+    fg = 7897675
+  },
+  ["@tag.attribute"] = {
+    ctermfg = 3,
+    fg = 11758915
+  },
+  ["@tag.builtin"] = {
+    link = "Special"
+  },
+  ["@tag.delimiter"] = {
+    ctermfg = 8,
+    fg = 6710886
+  },
+  ["@type"] = {
+    link = "Type"
+  },
+  ["@type.builtin"] = {
+    cterm = {
+      italic = true
+    },
+    ctermfg = 3,
+    fg = 11758915,
+    italic = true
+  },
+  ["@type.definition"] = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 3,
+    fg = 11758915
+  },
+  ["@variable"] = {
+    ctermfg = 7,
+    fg = 12763824
+  },
+  ["@variable.builtin"] = {
+    cterm = {
+      italic = true
+    },
+    ctermfg = 1,
+    fg = 6838082,
+    italic = true
+  },
+  ["@variable.member"] = {
+    ctermfg = 4,
+    fg = 7897675
+  },
+  ["@variable.parameter"] = {
+    cterm = {
+      italic = true
+    },
+    ctermfg = 7,
+    fg = 12763824,
+    italic = true
+  },
+  ["@variable.parameter.builtin"] = {
+    link = "Special"
+  },
+  Added = {
+    ctermfg = 2,
+    fg = 6260575
+  },
+  Boolean = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 3,
+    fg = 9265730
+  },
+  Changed = {
+    ctermfg = 3,
+    fg = 11758915
+  },
+  Character = {
+    ctermfg = 2,
+    fg = 6260575
+  },
+  CmpItemAbbr = {
+    ctermfg = 7,
+    fg = 12763824
+  },
+  CmpItemAbbrMatch = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    fg = 7897675
+  },
+  CmpItemAbbrMatchFuzzy = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    fg = 7897675
+  },
+  CmpItemKind = {
+    ctermfg = 6,
+    fg = 13215060
+  },
+  CmpItemMenu = {
+    cterm = {
+      italic = true
+    },
+    ctermfg = 7,
+    fg = 9079422,
+    italic = true
+  },
+  ColorColumn = {
+    bg = 3684408,
+    ctermbg = 8
+  },
+  Comment = {
+    cterm = {
+      italic = true
+    },
+    ctermfg = 7,
+    fg = 9079422,
+    italic = true
+  },
+  ComplHint = {
+    link = "NonText"
+  },
+  ComplHintMore = {
+    link = "MoreMsg"
+  },
+  ComplMatchIns = vim.empty_dict(),
+  Conceal = {
+    ctermfg = 8,
+    fg = 6710886
+  },
+  Conditional = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 5,
+    fg = 12285764
+  },
+  Constant = {
+    ctermfg = 3,
+    fg = 9265730
+  },
+  CurSearch = {
+    bold = true,
+    cterm = {
+      bold = true,
+      reverse = true
+    },
+    ctermfg = 3,
+    fg = 9265730,
+    reverse = true
+  },
+  Cursor = {
+    bg = 12763824,
+    ctermbg = 15,
+    ctermfg = 0,
+    fg = 2236962
+  },
+  CursorColumn = {
+    bg = 3684408,
+    ctermbg = 8
+  },
+  CursorIM = {
+    link = "Cursor"
+  },
+  CursorLine = {
+    bg = 3684408,
+    ctermbg = 8
+  },
+  CursorLineFold = {
+    link = "FoldColumn"
+  },
+  CursorLineNr = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    fg = 7897675
+  },
+  CursorLineSign = {
+    link = "SignColumn"
+  },
+  Debug = {
+    ctermfg = 1,
+    fg = 6838082
+  },
+  Define = {
+    ctermfg = 6,
+    fg = 13215060
+  },
+  Delimiter = {
+    ctermfg = 7,
+    fg = 12763824
+  },
+  DiagnosticDeprecated = {
+    cterm = {
+      strikethrough = true
+    },
+    sp = 16761017,
+    strikethrough = true
+  },
+  DiagnosticError = {
+    ctermfg = 1,
+    fg = 6838082
+  },
+  DiagnosticFloatingError = {
+    link = "DiagnosticError"
+  },
+  DiagnosticFloatingHint = {
+    link = "DiagnosticHint"
+  },
+  DiagnosticFloatingInfo = {
+    link = "DiagnosticInfo"
+  },
+  DiagnosticFloatingOk = {
+    link = "DiagnosticOk"
+  },
+  DiagnosticFloatingWarn = {
+    link = "DiagnosticWarn"
+  },
+  DiagnosticHint = {
+    ctermfg = 6,
+    fg = 13215060
+  },
+  DiagnosticInfo = {
+    ctermfg = 4,
+    fg = 7897675
+  },
+  DiagnosticOk = {
+    ctermfg = 2,
+    fg = 6260575
+  },
+  DiagnosticSignError = {
+    ctermfg = 1,
+    fg = 6838082
+  },
+  DiagnosticSignHint = {
+    ctermfg = 6,
+    fg = 13215060
+  },
+  DiagnosticSignInfo = {
+    ctermfg = 4,
+    fg = 7897675
+  },
+  DiagnosticSignOk = {
+    link = "DiagnosticOk"
+  },
+  DiagnosticSignWarn = {
+    ctermfg = 3,
+    fg = 11758915
+  },
+  DiagnosticUnderlineError = {
+    cterm = {
+      undercurl = true
+    },
+    sp = 6838082,
+    undercurl = true
+  },
+  DiagnosticUnderlineHint = {
+    cterm = {
+      undercurl = true
+    },
+    sp = 13215060,
+    undercurl = true
+  },
+  DiagnosticUnderlineInfo = {
+    cterm = {
+      undercurl = true
+    },
+    sp = 7897675,
+    undercurl = true
+  },
+  DiagnosticUnderlineOk = {
+    cterm = {
+      underline = true
+    },
+    sp = 11794112,
+    underline = true
+  },
+  DiagnosticUnderlineWarn = {
+    cterm = {
+      undercurl = true
+    },
+    sp = 11758915,
+    undercurl = true
+  },
+  DiagnosticUnnecessary = {
+    link = "Comment"
+  },
+  DiagnosticVirtualLinesError = {
+    link = "DiagnosticError"
+  },
+  DiagnosticVirtualLinesHint = {
+    link = "DiagnosticHint"
+  },
+  DiagnosticVirtualLinesInfo = {
+    link = "DiagnosticInfo"
+  },
+  DiagnosticVirtualLinesOk = {
+    link = "DiagnosticOk"
+  },
+  DiagnosticVirtualLinesWarn = {
+    link = "DiagnosticWarn"
+  },
+  DiagnosticVirtualTextError = {
+    cterm = {
+      italic = true
+    },
+    ctermfg = 1,
+    fg = 6838082,
+    italic = true
+  },
+  DiagnosticVirtualTextHint = {
+    cterm = {
+      italic = true
+    },
+    ctermfg = 6,
+    fg = 13215060,
+    italic = true
+  },
+  DiagnosticVirtualTextInfo = {
+    cterm = {
+      italic = true
+    },
+    ctermfg = 4,
+    fg = 7897675,
+    italic = true
+  },
+  DiagnosticVirtualTextOk = {
+    cterm = {
+      italic = true
+    },
+    ctermfg = 2,
+    fg = 6260575,
+    italic = true
+  },
+  DiagnosticVirtualTextWarn = {
+    cterm = {
+      italic = true
+    },
+    ctermfg = 3,
+    fg = 11758915,
+    italic = true
+  },
+  DiagnosticWarn = {
+    ctermfg = 3,
+    fg = 11758915
+  },
+  DiffAdd = {
+    bg = 1644825,
+    ctermbg = 0,
+    ctermfg = 2,
+    fg = 6260575
+  },
+  DiffChange = {
+    bg = 1644825,
+    ctermbg = 0,
+    ctermfg = 3,
+    fg = 11758915
+  },
+  DiffDelete = {
+    bg = 1644825,
+    ctermbg = 0,
+    ctermfg = 1,
+    fg = 6838082
+  },
+  DiffText = {
+    bg = 3684408,
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermbg = 8,
+    ctermfg = 15,
+    fg = 12763824
+  },
+  DiffTextAdd = {
+    link = "DiffText"
+  },
+  Directory = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 4,
+    fg = 7897675
+  },
+  EndOfBuffer = {
+    ctermfg = 0,
+    fg = 1644825
+  },
+  Error = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 1,
+    fg = 6838082
+  },
+  ErrorMsg = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 1,
+    fg = 6838082
+  },
+  Exception = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 1,
+    fg = 6838082
+  },
+  Float = {
+    ctermfg = 3,
+    fg = 9265730
+  },
+  FloatBorder = {
+    bg = 2894892,
+    ctermbg = 0,
+    ctermfg = 8,
+    fg = 6710886
+  },
+  FloatFooter = {
+    link = "FloatTitle"
+  },
+  FloatShadow = {
+    bg = 5198424,
+    blend = 80,
+    ctermbg = 0
+  },
+  FloatShadowThrough = {
+    bg = 5198424,
+    blend = 100,
+    ctermbg = 0
+  },
+  FloatTitle = {
+    bg = 2894892,
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermbg = 0,
+    fg = 7897675
+  },
+  FoldColumn = {
+    bg = 2236962,
+    ctermbg = 0,
+    ctermfg = 7,
+    fg = 9079422
+  },
+  Folded = {
+    bg = 1644825,
+    cterm = {
+      italic = true
+    },
+    ctermbg = 0,
+    ctermfg = 7,
+    fg = 9079422,
+    italic = true
+  },
+  Function = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 4,
+    fg = 7897675
+  },
+  GitSignsAdd = {
+    ctermfg = 2,
+    fg = 6260575
+  },
+  GitSignsChange = {
+    ctermfg = 3,
+    fg = 11758915
+  },
+  GitSignsDelete = {
+    ctermfg = 1,
+    fg = 6838082
+  },
+  HealthError = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 1,
+    fg = 6838082
+  },
+  HealthSuccess = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 2,
+    fg = 6260575
+  },
+  HealthWarning = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 3,
+    fg = 11758915
+  },
+  Identifier = {
+    ctermfg = 7,
+    fg = 12763824
+  },
+  Ignore = {
+    link = "Normal"
+  },
+  IncSearch = {
+    bold = true,
+    cterm = {
+      bold = true,
+      reverse = true
+    },
+    ctermfg = 3,
+    fg = 9265730,
+    reverse = true
+  },
+  Include = {
+    ctermfg = 6,
+    fg = 13215060
+  },
+  Keyword = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 5,
+    fg = 12285764
+  },
+  Label = {
+    ctermfg = 6,
+    fg = 13215060
+  },
+  LineNr = {
+    ctermfg = 7,
+    fg = 9079422
+  },
+  LineNrAbove = {
+    link = "LineNr"
+  },
+  LineNrBelow = {
+    link = "LineNr"
+  },
+  LspCodeLens = {
+    cterm = {
+      italic = true
+    },
+    ctermfg = 7,
+    fg = 9079422,
+    italic = true
+  },
+  LspCodeLensSeparator = {
+    ctermfg = 8,
+    fg = 6710886
+  },
+  LspInlayHint = {
+    bg = 1644825,
+    cterm = {
+      italic = true
+    },
+    ctermbg = 0,
+    ctermfg = 7,
+    fg = 9079422,
+    italic = true
+  },
+  LspReferenceRead = {
+    bg = 3684408,
+    ctermbg = 8
+  },
+  LspReferenceTarget = {
+    link = "LspReferenceText"
+  },
+  LspReferenceText = {
+    bg = 3684408,
+    ctermbg = 8
+  },
+  LspReferenceWrite = {
+    bg = 3684408,
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermbg = 8
+  },
+  LspSignatureActiveParameter = {
+    bg = 3684408,
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermbg = 8,
+    ctermfg = 15,
+    fg = 12763824
+  },
+  Macro = {
+    ctermfg = 6,
+    fg = 13215060
+  },
+  MatchParen = {
+    bg = 6710886,
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermbg = 8,
+    ctermfg = 15,
+    fg = 12763824
+  },
+  ModeMsg = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 7,
+    fg = 12763824
+  },
+  MoreMsg = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 6,
+    fg = 13215060
+  },
+  MsgArea = {
+    bg = 2236962,
+    ctermbg = 0,
+    ctermfg = 7,
+    fg = 12763824
+  },
+  MsgSeparator = {
+    link = "StatusLine"
+  },
+  NonText = {
+    ctermfg = 7,
+    fg = 9079422
+  },
+  Normal = {
+    bg = 2236962,
+    ctermbg = 0,
+    ctermfg = 7,
+    fg = 12763824
+  },
+  NormalFloat = {
+    bg = 2894892,
+    ctermbg = 0,
+    ctermfg = 7,
+    fg = 12763824
+  },
+  NormalNC = {
+    bg = 1644825,
+    ctermbg = 0,
+    ctermfg = 7,
+    fg = 12763824
+  },
+  Number = {
+    ctermfg = 3,
+    fg = 9265730
+  },
+  NvimAnd = {
+    link = "NvimBinaryOperator"
+  },
+  NvimArrow = {
+    link = "Delimiter"
+  },
+  NvimAssignment = {
+    link = "Operator"
+  },
+  NvimAssignmentWithAddition = {
+    link = "NvimAugmentedAssignment"
+  },
+  NvimAssignmentWithConcatenation = {
+    link = "NvimAugmentedAssignment"
+  },
+  NvimAssignmentWithSubtraction = {
+    link = "NvimAugmentedAssignment"
+  },
+  NvimAugmentedAssignment = {
+    link = "NvimAssignment"
+  },
+  NvimBinaryMinus = {
+    link = "NvimBinaryOperator"
+  },
+  NvimBinaryOperator = {
+    link = "NvimOperator"
+  },
+  NvimBinaryPlus = {
+    link = "NvimBinaryOperator"
+  },
+  NvimCallingParenthesis = {
+    link = "NvimParenthesis"
+  },
+  NvimColon = {
+    link = "Delimiter"
+  },
+  NvimComma = {
+    link = "Delimiter"
+  },
+  NvimComparison = {
+    link = "NvimBinaryOperator"
+  },
+  NvimComparisonModifier = {
+    link = "NvimComparison"
+  },
+  NvimConcat = {
+    link = "NvimBinaryOperator"
+  },
+  NvimConcatOrSubscript = {
+    link = "NvimConcat"
+  },
+  NvimContainer = {
+    link = "NvimParenthesis"
+  },
+  NvimCurly = {
+    link = "NvimSubscript"
+  },
+  NvimDict = {
+    link = "NvimContainer"
+  },
+  NvimDivision = {
+    link = "NvimBinaryOperator"
+  },
+  NvimDoubleQuote = {
+    link = "NvimStringQuote"
+  },
+  NvimDoubleQuotedBody = {
+    link = "NvimStringBody"
+  },
+  NvimDoubleQuotedEscape = {
+    link = "NvimStringSpecial"
+  },
+  NvimDoubleQuotedUnknownEscape = {
+    link = "NvimInvalidValue"
+  },
+  NvimEnvironmentName = {
+    link = "NvimIdentifier"
+  },
+  NvimEnvironmentSigil = {
+    link = "NvimOptionSigil"
+  },
+  NvimFigureBrace = {
+    link = "NvimInternalError"
+  },
+  NvimFloat = {
+    link = "NvimNumber"
+  },
+  NvimIdentifier = {
+    link = "Identifier"
+  },
+  NvimIdentifierKey = {
+    link = "NvimIdentifier"
+  },
+  NvimIdentifierName = {
+    link = "NvimIdentifier"
+  },
+  NvimIdentifierScope = {
+    link = "NvimIdentifier"
+  },
+  NvimIdentifierScopeDelimiter = {
+    link = "NvimIdentifier"
+  },
+  NvimInternalError = {
+    bg = 16711680,
+    ctermbg = 9,
+    ctermfg = 9,
+    fg = 16711680
+  },
+  NvimInvalid = {
+    link = "Error"
+  },
+  NvimInvalidAnd = {
+    link = "NvimInvalidBinaryOperator"
+  },
+  NvimInvalidArrow = {
+    link = "NvimInvalidDelimiter"
+  },
+  NvimInvalidAssignment = {
+    link = "NvimInvalid"
+  },
+  NvimInvalidAssignmentWithAddition = {
+    link = "NvimInvalidAugmentedAssignment"
+  },
+  NvimInvalidAssignmentWithConcatenation = {
+    link = "NvimInvalidAugmentedAssignment"
+  },
+  NvimInvalidAssignmentWithSubtraction = {
+    link = "NvimInvalidAugmentedAssignment"
+  },
+  NvimInvalidAugmentedAssignment = {
+    link = "NvimInvalidAssignment"
+  },
+  NvimInvalidBinaryMinus = {
+    link = "NvimInvalidBinaryOperator"
+  },
+  NvimInvalidBinaryOperator = {
+    link = "NvimInvalidOperator"
+  },
+  NvimInvalidBinaryPlus = {
+    link = "NvimInvalidBinaryOperator"
+  },
+  NvimInvalidCallingParenthesis = {
+    link = "NvimInvalidParenthesis"
+  },
+  NvimInvalidColon = {
+    link = "NvimInvalidDelimiter"
+  },
+  NvimInvalidComma = {
+    link = "NvimInvalidDelimiter"
+  },
+  NvimInvalidComparison = {
+    link = "NvimInvalidBinaryOperator"
+  },
+  NvimInvalidComparisonModifier = {
+    link = "NvimInvalidComparison"
+  },
+  NvimInvalidConcat = {
+    link = "NvimInvalidBinaryOperator"
+  },
+  NvimInvalidConcatOrSubscript = {
+    link = "NvimInvalidConcat"
+  },
+  NvimInvalidContainer = {
+    link = "NvimInvalidParenthesis"
+  },
+  NvimInvalidCurly = {
+    link = "NvimInvalidSubscript"
+  },
+  NvimInvalidDelimiter = {
+    link = "NvimInvalid"
+  },
+  NvimInvalidDict = {
+    link = "NvimInvalidContainer"
+  },
+  NvimInvalidDivision = {
+    link = "NvimInvalidBinaryOperator"
+  },
+  NvimInvalidDoubleQuote = {
+    link = "NvimInvalidStringQuote"
+  },
+  NvimInvalidDoubleQuotedBody = {
+    link = "NvimInvalidStringBody"
+  },
+  NvimInvalidDoubleQuotedEscape = {
+    link = "NvimInvalidStringSpecial"
+  },
+  NvimInvalidDoubleQuotedUnknownEscape = {
+    link = "NvimInvalidValue"
+  },
+  NvimInvalidEnvironmentName = {
+    link = "NvimInvalidIdentifier"
+  },
+  NvimInvalidEnvironmentSigil = {
+    link = "NvimInvalidOptionSigil"
+  },
+  NvimInvalidFigureBrace = {
+    link = "NvimInvalidDelimiter"
+  },
+  NvimInvalidFloat = {
+    link = "NvimInvalidNumber"
+  },
+  NvimInvalidIdentifier = {
+    link = "NvimInvalidValue"
+  },
+  NvimInvalidIdentifierKey = {
+    link = "NvimInvalidIdentifier"
+  },
+  NvimInvalidIdentifierName = {
+    link = "NvimInvalidIdentifier"
+  },
+  NvimInvalidIdentifierScope = {
+    link = "NvimInvalidIdentifier"
+  },
+  NvimInvalidIdentifierScopeDelimiter = {
+    link = "NvimInvalidIdentifier"
+  },
+  NvimInvalidLambda = {
+    link = "NvimInvalidParenthesis"
+  },
+  NvimInvalidList = {
+    link = "NvimInvalidContainer"
+  },
+  NvimInvalidMod = {
+    link = "NvimInvalidBinaryOperator"
+  },
+  NvimInvalidMultiplication = {
+    link = "NvimInvalidBinaryOperator"
+  },
+  NvimInvalidNestingParenthesis = {
+    link = "NvimInvalidParenthesis"
+  },
+  NvimInvalidNot = {
+    link = "NvimInvalidUnaryOperator"
+  },
+  NvimInvalidNumber = {
+    link = "NvimInvalidValue"
+  },
+  NvimInvalidNumberPrefix = {
+    link = "NvimInvalidNumber"
+  },
+  NvimInvalidOperator = {
+    link = "NvimInvalid"
+  },
+  NvimInvalidOptionName = {
+    link = "NvimInvalidIdentifier"
+  },
+  NvimInvalidOptionScope = {
+    link = "NvimInvalidIdentifierScope"
+  },
+  NvimInvalidOptionScopeDelimiter = {
+    link = "NvimInvalidIdentifierScopeDelimiter"
+  },
+  NvimInvalidOptionSigil = {
+    link = "NvimInvalidIdentifier"
+  },
+  NvimInvalidOr = {
+    link = "NvimInvalidBinaryOperator"
+  },
+  NvimInvalidParenthesis = {
+    link = "NvimInvalidDelimiter"
+  },
+  NvimInvalidPlainAssignment = {
+    link = "NvimInvalidAssignment"
+  },
+  NvimInvalidRegister = {
+    link = "NvimInvalidValue"
+  },
+  NvimInvalidSingleQuote = {
+    link = "NvimInvalidStringQuote"
+  },
+  NvimInvalidSingleQuotedBody = {
+    link = "NvimInvalidStringBody"
+  },
+  NvimInvalidSingleQuotedQuote = {
+    link = "NvimInvalidStringSpecial"
+  },
+  NvimInvalidSingleQuotedUnknownEscape = {
+    link = "NvimInternalError"
+  },
+  NvimInvalidSpacing = {
+    link = "ErrorMsg"
+  },
+  NvimInvalidString = {
+    link = "NvimInvalidValue"
+  },
+  NvimInvalidStringBody = {
+    link = "NvimStringBody"
+  },
+  NvimInvalidStringQuote = {
+    link = "NvimInvalidString"
+  },
+  NvimInvalidStringSpecial = {
+    link = "NvimStringSpecial"
+  },
+  NvimInvalidSubscript = {
+    link = "NvimInvalidParenthesis"
+  },
+  NvimInvalidSubscriptBracket = {
+    link = "NvimInvalidSubscript"
+  },
+  NvimInvalidSubscriptColon = {
+    link = "NvimInvalidSubscript"
+  },
+  NvimInvalidTernary = {
+    link = "NvimInvalidOperator"
+  },
+  NvimInvalidTernaryColon = {
+    link = "NvimInvalidTernary"
+  },
+  NvimInvalidUnaryMinus = {
+    link = "NvimInvalidUnaryOperator"
+  },
+  NvimInvalidUnaryOperator = {
+    link = "NvimInvalidOperator"
+  },
+  NvimInvalidUnaryPlus = {
+    link = "NvimInvalidUnaryOperator"
+  },
+  NvimInvalidValue = {
+    link = "NvimInvalid"
+  },
+  NvimLambda = {
+    link = "NvimParenthesis"
+  },
+  NvimList = {
+    link = "NvimContainer"
+  },
+  NvimMod = {
+    link = "NvimBinaryOperator"
+  },
+  NvimMultiplication = {
+    link = "NvimBinaryOperator"
+  },
+  NvimNestingParenthesis = {
+    link = "NvimParenthesis"
+  },
+  NvimNot = {
+    link = "NvimUnaryOperator"
+  },
+  NvimNumber = {
+    link = "Number"
+  },
+  NvimNumberPrefix = {
+    link = "Type"
+  },
+  NvimOperator = {
+    link = "Operator"
+  },
+  NvimOptionName = {
+    link = "NvimIdentifier"
+  },
+  NvimOptionScope = {
+    link = "NvimIdentifierScope"
+  },
+  NvimOptionScopeDelimiter = {
+    link = "NvimIdentifierScopeDelimiter"
+  },
+  NvimOptionSigil = {
+    link = "Type"
+  },
+  NvimOr = {
+    link = "NvimBinaryOperator"
+  },
+  NvimParenthesis = {
+    link = "Delimiter"
+  },
+  NvimPlainAssignment = {
+    link = "NvimAssignment"
+  },
+  NvimRegister = {
+    link = "SpecialChar"
+  },
+  NvimSingleQuote = {
+    link = "NvimStringQuote"
+  },
+  NvimSingleQuotedBody = {
+    link = "NvimStringBody"
+  },
+  NvimSingleQuotedQuote = {
+    link = "NvimStringSpecial"
+  },
+  NvimSingleQuotedUnknownEscape = {
+    link = "NvimInternalError"
+  },
+  NvimSpacing = {
+    link = "Normal"
+  },
+  NvimString = {
+    link = "String"
+  },
+  NvimStringBody = {
+    link = "NvimString"
+  },
+  NvimStringQuote = {
+    link = "NvimString"
+  },
+  NvimStringSpecial = {
+    link = "SpecialChar"
+  },
+  NvimSubscript = {
+    link = "NvimParenthesis"
+  },
+  NvimSubscriptBracket = {
+    link = "NvimSubscript"
+  },
+  NvimSubscriptColon = {
+    link = "NvimSubscript"
+  },
+  NvimTernary = {
+    link = "NvimOperator"
+  },
+  NvimTernaryColon = {
+    link = "NvimTernary"
+  },
+  NvimUnaryMinus = {
+    link = "NvimUnaryOperator"
+  },
+  NvimUnaryOperator = {
+    link = "NvimOperator"
+  },
+  NvimUnaryPlus = {
+    link = "NvimUnaryOperator"
+  },
+  OkMsg = {
+    ctermfg = 10,
+    fg = 11794112
+  },
+  Operator = {
+    ctermfg = 6,
+    fg = 13215060
+  },
+  Pmenu = {
+    bg = 2894892,
+    ctermbg = 0,
+    ctermfg = 7,
+    fg = 12763824
+  },
+  PmenuBorder = {
+    link = "Pmenu"
+  },
+  PmenuExtra = {
+    link = "Pmenu"
+  },
+  PmenuExtraSel = {
+    link = "PmenuSel"
+  },
+  PmenuKind = {
+    link = "Pmenu"
+  },
+  PmenuKindSel = {
+    link = "PmenuSel"
+  },
+  PmenuMatch = {
+    bold = true,
+    cterm = {
+      bold = true
+    }
+  },
+  PmenuMatchSel = {
+    bold = true,
+    cterm = {
+      bold = true
+    }
+  },
+  PmenuSbar = {
+    bg = 3684408,
+    ctermbg = 8
+  },
+  PmenuSel = {
+    bg = 3684408,
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermbg = 8,
+    ctermfg = 15,
+    fg = 12763824
+  },
+  PmenuShadow = {
+    link = "FloatShadow"
+  },
+  PmenuShadowThrough = {
+    link = "FloatShadowThrough"
+  },
+  PmenuThumb = {
+    bg = 6710886,
+    ctermbg = 8
+  },
+  PreCondit = {
+    ctermfg = 6,
+    fg = 13215060
+  },
+  PreInsert = {
+    link = "Added"
+  },
+  PreProc = {
+    ctermfg = 6,
+    fg = 13215060
+  },
+  Question = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 2,
+    fg = 6260575
+  },
+  QuickFixLine = {
+    ctermfg = 14,
+    fg = 9238775
+  },
+  RedrawDebugClear = {
+    bg = 7033600,
+    ctermbg = 11,
+    ctermfg = 0
+  },
+  RedrawDebugComposed = {
+    bg = 21795,
+    ctermbg = 10,
+    ctermfg = 0
+  },
+  RedrawDebugNormal = {
+    cterm = {
+      reverse = true
+    },
+    reverse = true
+  },
+  RedrawDebugRecompose = {
+    bg = 5832712,
+    ctermbg = 9,
+    ctermfg = 0
+  },
+  Removed = {
+    ctermfg = 1,
+    fg = 6838082
+  },
+  Repeat = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 5,
+    fg = 12285764
+  },
+  Search = {
+    bg = 11758915,
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermbg = 3,
+    ctermfg = 0,
+    fg = 2236962
+  },
+  SignColumn = {
+    ctermfg = 7,
+    fg = 9079422
+  },
+  SnippetTabstop = {
+    link = "Visual"
+  },
+  SnippetTabstopActive = {
+    link = "SnippetTabstop"
+  },
+  Special = {
+    ctermfg = 6,
+    fg = 13215060
+  },
+  SpecialChar = {
+    ctermfg = 3,
+    fg = 9265730
+  },
+  SpecialComment = {
+    link = "Special"
+  },
+  SpecialKey = {
+    ctermfg = 7,
+    fg = 9079422
+  },
+  SpellBad = {
+    cterm = {
+      undercurl = true
+    },
+    sp = 6838082,
+    undercurl = true
+  },
+  SpellCap = {
+    cterm = {
+      undercurl = true
+    },
+    sp = 11758915,
+    undercurl = true
+  },
+  SpellLocal = {
+    cterm = {
+      undercurl = true
+    },
+    sp = 13215060,
+    undercurl = true
+  },
+  SpellRare = {
+    cterm = {
+      undercurl = true
+    },
+    sp = 12285764,
+    undercurl = true
+  },
+  Statement = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 5,
+    fg = 12285764
+  },
+  StatusLine = {
+    bg = 2894892,
+    ctermbg = 0,
+    ctermfg = 7,
+    fg = 12763824
+  },
+  StatusLineNC = {
+    bg = 1644825,
+    ctermbg = 0,
+    ctermfg = 7,
+    fg = 9079422
+  },
+  StatusLineTerm = {
+    link = "StatusLine"
+  },
+  StatusLineTermNC = {
+    link = "StatusLineNC"
+  },
+  StderrMsg = {
+    link = "ErrorMsg"
+  },
+  StdoutMsg = vim.empty_dict(),
+  StorageClass = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 3,
+    fg = 11758915
+  },
+  String = {
+    ctermfg = 2,
+    fg = 6260575
+  },
+  Structure = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 3,
+    fg = 11758915
+  },
+  Substitute = {
+    bg = 12285764,
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermbg = 5,
+    ctermfg = 0,
+    fg = 2236962
+  },
+  TabLine = {
+    bg = 1644825,
+    ctermbg = 0,
+    ctermfg = 7,
+    fg = 9079422
+  },
+  TabLineFill = {
+    bg = 1644825,
+    ctermbg = 0
+  },
+  TabLineSel = {
+    bg = 2236962,
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermbg = 0,
+    ctermfg = 15,
+    fg = 12763824
+  },
+  Tag = {
+    ctermfg = 4,
+    fg = 7897675
+  },
+  TelescopeBorder = {
+    bg = 2894892,
+    ctermbg = 0,
+    ctermfg = 8,
+    fg = 6710886
+  },
+  TelescopeMatching = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 4,
+    fg = 7897675
+  },
+  TelescopeNormal = {
+    bg = 2894892,
+    ctermbg = 0,
+    ctermfg = 7,
+    fg = 12763824
+  },
+  TelescopePromptBorder = {
+    bg = 3684408,
+    ctermbg = 8,
+    ctermfg = 8,
+    fg = 3684408
+  },
+  TelescopePromptNormal = {
+    bg = 3684408,
+    ctermbg = 8,
+    ctermfg = 7,
+    fg = 12763824
+  },
+  TelescopePromptPrefix = {
+    bg = 3684408,
+    ctermbg = 8,
+    fg = 7897675
+  },
+  TelescopePromptTitle = {
+    bg = 7897675,
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 0,
+    fg = 2236962
+  },
+  TelescopeResultsDiffAdd = {
+    ctermfg = 2,
+    fg = 6260575
+  },
+  TelescopeResultsDiffChange = {
+    ctermfg = 3,
+    fg = 11758915
+  },
+  TelescopeResultsDiffDelete = {
+    ctermfg = 1,
+    fg = 6838082
+  },
+  TelescopeSelection = {
+    bg = 3684408,
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermbg = 8,
+    ctermfg = 15,
+    fg = 12763824
+  },
+  TelescopeTitle = {
+    bg = 2894892,
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermbg = 0,
+    fg = 7897675
+  },
+  TermCursor = {
+    cterm = {
+      reverse = true
+    },
+    reverse = true
+  },
+  Title = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    fg = 7897675
+  },
+  Todo = {
+    bg = 11758915,
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermbg = 3,
+    ctermfg = 0,
+    fg = 2236962
+  },
+  Type = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 3,
+    fg = 11758915
+  },
+  Typedef = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 3,
+    fg = 11758915
+  },
+  Underlined = {
+    cterm = {
+      underline = true
+    },
+    ctermfg = 4,
+    fg = 7897675,
+    underline = true
+  },
+  VertSplit = {
+    ctermfg = 8,
+    fg = 6710886
+  },
+  Visual = {
+    bg = 3684408,
+    ctermbg = 8
+  },
+  VisualNOS = {
+    bg = 3684408,
+    ctermbg = 8
+  },
+  WarningMsg = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 3,
+    fg = 11758915
+  },
+  WhichKey = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    fg = 7897675
+  },
+  WhichKeyDesc = {
+    ctermfg = 7,
+    fg = 12763824
+  },
+  WhichKeyFloat = {
+    bg = 2894892,
+    ctermbg = 0
+  },
+  WhichKeyGroup = {
+    ctermfg = 6,
+    fg = 13215060
+  },
+  WhichKeySeparator = {
+    ctermfg = 8,
+    fg = 6710886
+  },
+  WhichKeyValue = {
+    cterm = {
+      italic = true
+    },
+    ctermfg = 7,
+    fg = 9079422,
+    italic = true
+  },
+  Whitespace = {
+    ctermfg = 7,
+    fg = 9079422
+  },
+  WildMenu = {
+    bg = 3684408,
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermbg = 8,
+    ctermfg = 15,
+    fg = 12763824
+  },
+  WinBar = {
+    bg = 2236962,
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermbg = 0,
+    ctermfg = 7,
+    fg = 12763824
+  },
+  WinBarNC = {
+    bg = 2236962,
+    ctermbg = 0,
+    ctermfg = 7,
+    fg = 9079422
+  },
+  WinSeparator = {
+    ctermfg = 8,
+    fg = 6710886
+  },
+  lCursor = {
+    bg = 12763824,
+    fg = 2236962
+  },
+  markdownBold = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 15,
+    fg = 12763824
+  },
+  markdownCode = {
+    ctermfg = 2,
+    fg = 6260575
+  },
+  markdownCodeBlock = {
+    ctermfg = 2,
+    fg = 6260575
+  },
+  markdownH1 = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    fg = 7897675
+  },
+  markdownH2 = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 4,
+    fg = 7897675
+  },
+  markdownH3 = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 6,
+    fg = 13215060
+  },
+  markdownH4 = {
+    bold = true,
+    cterm = {
+      bold = true
+    },
+    ctermfg = 2,
+    fg = 6260575
+  },
+  markdownItalic = {
+    cterm = {
+      italic = true
+    },
+    ctermfg = 7,
+    fg = 12763824,
+    italic = true
+  },
+  markdownLinkText = {
+    cterm = {
+      underline = true
+    },
+    ctermfg = 4,
+    fg = 7897675,
+    underline = true
+  }
+}
