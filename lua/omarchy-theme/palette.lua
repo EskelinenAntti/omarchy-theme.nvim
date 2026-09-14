@@ -1,12 +1,12 @@
 ---@class AnsiPalette
----@field background integer
+---@field black integer
+---@field white integer
 ---@field red integer
 ---@field green integer
 ---@field yellow integer
 ---@field blue integer
 ---@field magenta integer
 ---@field cyan integer
----@field foreground integer
 ---@field selection integer
 ---@field bright_red integer
 ---@field bright_green integer
@@ -79,14 +79,14 @@ return {
 
 	---@type AnsiPalette
 	ansi_palette = {
-		background = 0,
+		black = 0,
+		white = 7,
 		red = 1,
 		green = 2,
 		yellow = 3,
 		blue = 4,
 		magenta = 5,
 		cyan = 6,
-		foreground = 7,
 		selection = 8,
 		bright_red = 9,
 		bright_green = 10,

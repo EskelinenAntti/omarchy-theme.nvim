@@ -233,7 +233,6 @@
     cterm = {
       italic = true
     },
-    ctermfg = 7,
     italic = true
   },
   ["@markup.link"] = {
@@ -286,9 +285,7 @@
   ["@punctuation"] = {
     link = "Delimiter"
   },
-  ["@punctuation.bracket"] = {
-    ctermfg = 7
-  },
+  ["@punctuation.bracket"] = vim.empty_dict(),
   ["@punctuation.delimiter"] = {
     ctermfg = 8
   },
@@ -354,9 +351,7 @@
     },
     ctermfg = 3
   },
-  ["@variable"] = {
-    ctermfg = 7
-  },
+  ["@variable"] = vim.empty_dict(),
   ["@variable.builtin"] = {
     cterm = {
       italic = true
@@ -371,7 +366,6 @@
     cterm = {
       italic = true
     },
-    ctermfg = 7,
     italic = true
   },
   ["@variable.parameter.builtin"] = {
@@ -393,9 +387,7 @@
   Character = {
     ctermfg = 2
   },
-  CmpItemAbbr = {
-    ctermfg = 7
-  },
+  CmpItemAbbr = vim.empty_dict(),
   CmpItemAbbrMatch = {
     bold = true,
     cterm = {
@@ -415,7 +407,6 @@
     cterm = {
       italic = true
     },
-    ctermfg = 7,
     italic = true
   },
   ColorColumn = {
@@ -425,7 +416,6 @@
     cterm = {
       italic = true
     },
-    ctermfg = 7,
     italic = true
   },
   ComplHint = {
@@ -458,8 +448,7 @@
     reverse = true
   },
   Cursor = {
-    ctermbg = 15,
-    ctermfg = 0
+    ctermbg = 15
   },
   CursorColumn = {
     ctermbg = 8
@@ -488,9 +477,7 @@
   Define = {
     ctermfg = 6
   },
-  Delimiter = {
-    ctermfg = 7
-  },
+  Delimiter = vim.empty_dict(),
   DiagnosticDeprecated = {
     cterm = {
       strikethrough = true
@@ -628,15 +615,12 @@
     ctermfg = 3
   },
   DiffAdd = {
-    ctermbg = 0,
     ctermfg = 2
   },
   DiffChange = {
-    ctermbg = 0,
     ctermfg = 3
   },
   DiffDelete = {
-    ctermbg = 0,
     ctermfg = 1
   },
   DiffText = {
@@ -657,9 +641,7 @@
     },
     ctermfg = 4
   },
-  EndOfBuffer = {
-    ctermfg = 0
-  },
+  EndOfBuffer = vim.empty_dict(),
   Error = {
     bold = true,
     cterm = {
@@ -685,7 +667,6 @@
     ctermfg = 3
   },
   FloatBorder = {
-    ctermbg = 0,
     ctermfg = 8
   },
   FloatFooter = {
@@ -705,19 +686,13 @@
     bold = true,
     cterm = {
       bold = true
-    },
-    ctermbg = 0
+    }
   },
-  FoldColumn = {
-    ctermbg = 0,
-    ctermfg = 7
-  },
+  FoldColumn = vim.empty_dict(),
   Folded = {
     cterm = {
       italic = true
     },
-    ctermbg = 0,
-    ctermfg = 7,
     italic = true
   },
   Function = {
@@ -757,9 +732,7 @@
     },
     ctermfg = 3
   },
-  Identifier = {
-    ctermfg = 7
-  },
+  Identifier = vim.empty_dict(),
   Ignore = {
     link = "Normal"
   },
@@ -785,9 +758,7 @@
   Label = {
     ctermfg = 6
   },
-  LineNr = {
-    ctermfg = 7
-  },
+  LineNr = vim.empty_dict(),
   LineNrAbove = {
     link = "LineNr"
   },
@@ -798,7 +769,6 @@
     cterm = {
       italic = true
     },
-    ctermfg = 7,
     italic = true
   },
   LspCodeLensSeparator = {
@@ -808,8 +778,6 @@
     cterm = {
       italic = true
     },
-    ctermbg = 0,
-    ctermfg = 7,
     italic = true
   },
   LspReferenceRead = {
@@ -851,8 +819,7 @@
     bold = true,
     cterm = {
       bold = true
-    },
-    ctermfg = 7
+    }
   },
   MoreMsg = {
     bold = true,
@@ -861,28 +828,14 @@
     },
     ctermfg = 6
   },
-  MsgArea = {
-    ctermbg = 0,
-    ctermfg = 7
-  },
+  MsgArea = vim.empty_dict(),
   MsgSeparator = {
     link = "StatusLine"
   },
-  NonText = {
-    ctermfg = 7
-  },
-  Normal = {
-    ctermbg = 0,
-    ctermfg = 7
-  },
-  NormalFloat = {
-    ctermbg = 0,
-    ctermfg = 7
-  },
-  NormalNC = {
-    ctermbg = 0,
-    ctermfg = 7
-  },
+  NonText = vim.empty_dict(),
+  Normal = vim.empty_dict(),
+  NormalFloat = vim.empty_dict(),
+  NormalNC = vim.empty_dict(),
   Number = {
     ctermfg = 3
   },
@@ -1316,10 +1269,7 @@
   Operator = {
     ctermfg = 6
   },
-  Pmenu = {
-    ctermbg = 0,
-    ctermfg = 7
-  },
+  Pmenu = vim.empty_dict(),
   PmenuBorder = {
     link = "Pmenu"
   },
@@ -1423,12 +1373,9 @@
     cterm = {
       bold = true
     },
-    ctermbg = 3,
-    ctermfg = 0
+    ctermbg = 3
   },
-  SignColumn = {
-    ctermfg = 7
-  },
+  SignColumn = vim.empty_dict(),
   SnippetTabstop = {
     link = "Visual"
   },
@@ -1444,9 +1391,7 @@
   SpecialComment = {
     link = "Special"
   },
-  SpecialKey = {
-    ctermfg = 7
-  },
+  SpecialKey = vim.empty_dict(),
   SpellBad = {
     cterm = {
       undercurl = true
@@ -1478,14 +1423,8 @@
     },
     ctermfg = 5
   },
-  StatusLine = {
-    ctermbg = 0,
-    ctermfg = 7
-  },
-  StatusLineNC = {
-    ctermbg = 0,
-    ctermfg = 7
-  },
+  StatusLine = vim.empty_dict(),
+  StatusLineNC = vim.empty_dict(),
   StatusLineTerm = {
     link = "StatusLine"
   },
@@ -1518,29 +1457,21 @@
     cterm = {
       bold = true
     },
-    ctermbg = 5,
-    ctermfg = 0
+    ctermbg = 5
   },
-  TabLine = {
-    ctermbg = 0,
-    ctermfg = 7
-  },
-  TabLineFill = {
-    ctermbg = 0
-  },
+  TabLine = vim.empty_dict(),
+  TabLineFill = vim.empty_dict(),
   TabLineSel = {
     bold = true,
     cterm = {
       bold = true
     },
-    ctermbg = 0,
     ctermfg = 15
   },
   Tag = {
     ctermfg = 4
   },
   TelescopeBorder = {
-    ctermbg = 0,
     ctermfg = 8
   },
   TelescopeMatching = {
@@ -1550,17 +1481,13 @@
     },
     ctermfg = 4
   },
-  TelescopeNormal = {
-    ctermbg = 0,
-    ctermfg = 7
-  },
+  TelescopeNormal = vim.empty_dict(),
   TelescopePromptBorder = {
     ctermbg = 8,
     ctermfg = 8
   },
   TelescopePromptNormal = {
-    ctermbg = 8,
-    ctermfg = 7
+    ctermbg = 8
   },
   TelescopePromptPrefix = {
     ctermbg = 8
@@ -1569,8 +1496,7 @@
     bold = true,
     cterm = {
       bold = true
-    },
-    ctermfg = 0
+    }
   },
   TelescopeResultsDiffAdd = {
     ctermfg = 2
@@ -1593,8 +1519,7 @@
     bold = true,
     cterm = {
       bold = true
-    },
-    ctermbg = 0
+    }
   },
   TermCursor = {
     cterm = {
@@ -1613,8 +1538,7 @@
     cterm = {
       bold = true
     },
-    ctermbg = 3,
-    ctermfg = 0
+    ctermbg = 3
   },
   Type = {
     bold = true,
@@ -1659,12 +1583,8 @@
       bold = true
     }
   },
-  WhichKeyDesc = {
-    ctermfg = 7
-  },
-  WhichKeyFloat = {
-    ctermbg = 0
-  },
+  WhichKeyDesc = vim.empty_dict(),
+  WhichKeyFloat = vim.empty_dict(),
   WhichKeyGroup = {
     ctermfg = 6
   },
@@ -1675,12 +1595,9 @@
     cterm = {
       italic = true
     },
-    ctermfg = 7,
     italic = true
   },
-  Whitespace = {
-    ctermfg = 7
-  },
+  Whitespace = vim.empty_dict(),
   WildMenu = {
     bold = true,
     cterm = {
@@ -1693,14 +1610,9 @@
     bold = true,
     cterm = {
       bold = true
-    },
-    ctermbg = 0,
-    ctermfg = 7
+    }
   },
-  WinBarNC = {
-    ctermbg = 0,
-    ctermfg = 7
-  },
+  WinBarNC = vim.empty_dict(),
   WinSeparator = {
     ctermfg = 8
   },
@@ -1749,7 +1661,6 @@
     cterm = {
       italic = true
     },
-    ctermfg = 7,
     italic = true
   },
   markdownLinkText = {
