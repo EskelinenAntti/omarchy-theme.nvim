@@ -1,10 +1,11 @@
 return {
-	["Omarchy theme colors are applied as Neovim highlights"] = function()
-		-- Given
+	before = function()
 		local env = require("omarchy-theme.environment")
 		env.omarchy_current_theme_colors_path = "tests/current/theme/colors.toml"
 		env.omarchy_current_theme_name_path = "tests/current/theme.name"
+	end,
 
+	["Omarchy theme colors are applied as Neovim highlights"] = function()
 		-- When
 		vim.cmd.colorscheme("omarchy")
 
@@ -20,7 +21,6 @@ return {
 		vim.api.nvim_set_hl(0, "Normal", { fg = old_highlight })
 
 		local env = require("omarchy-theme.environment")
-		env.omarchy_current_theme_colors_path = "tests/not-existing/theme/colors.toml"
 		env.omarchy_current_theme_name_path = "tests/not-existing/theme.name"
 
 		-- When
@@ -35,10 +35,6 @@ return {
 		-- Given
 		vim.api.nvim_set_hl(0, "HighlightGroupToClear", { fg = "#ffffff" })
 
-		local env = require("omarchy-theme.environment")
-		env.omarchy_current_theme_colors_path = "tests/current/theme/colors.toml"
-		env.omarchy_current_theme_name_path = "tests/current/theme.name"
-
 		-- When
 		vim.cmd.colorscheme("omarchy")
 
@@ -52,7 +48,6 @@ return {
 
 		local env = require("omarchy-theme.environment")
 		env.omarchy_current_theme_colors_path = "tests/current/theme/colors-without-orange.toml"
-		env.omarchy_current_theme_name_path = "tests/current/theme.name"
 
 		-- When
 		vim.cmd.colorscheme("omarchy")
