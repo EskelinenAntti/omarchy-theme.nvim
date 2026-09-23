@@ -2,4 +2,4 @@ test:
 	nvim --headless --clean -c "set rtp+=." -l tests/init.lua
 
 snapshot:
-	nvim --headless --clean -c "set rtp+=." -l tests/update-snapshot.lua
+	UPDATE_SNAPSHOTS=1 nvim --headless --clean -c "set rtp+=." -l tests/init.lua
